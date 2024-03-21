@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gh-page-test/static/css/main.1880e480.css",
+    "main.js": "/gh-page-test/static/js/main.0e86ebe2.js",
+    "index.html": "/gh-page-test/index.html",
+    "main.1880e480.css.map": "/gh-page-test/static/css/main.1880e480.css.map",
+    "main.0e86ebe2.js.map": "/gh-page-test/static/js/main.0e86ebe2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1880e480.css",
+    "static/js/main.0e86ebe2.js"
+  ]
+}

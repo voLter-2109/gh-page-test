@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useActions } from "../../hooks/storeHooksType";
 import { IResponsePlaceholder } from "../../type/response-metmusem";
@@ -23,17 +24,15 @@ const PostItem: FC<{ item: IResponsePlaceholder; favorites: boolean }> = ({
           <span>{body.length > 180 ? `${body.slice(0, 180)}...` : body}</span>
         </div>
       </Link>
-      <div className="absolute top-2 right-1">
-        <button
-          className="text-red-600"
-          onClick={() => (!!!favorites ? addFavorite(id) : removeFavorite(id))}
-        >
-          {favorites ? (
-            <AiFillHeart size="20px" />
-          ) : (
-            <AiOutlineHeart size="20px" />
-          )}
+      <div className="absolute top-2 right-1 flex flex-col gap-2 ">
+        <button className="text-red-600" onClick={() => addFavorite(id)}>
+          {favorites ? <AiFillHeart size={20} /> : <AiOutlineHeart size={20} />}
         </button>
+        {!!favorites && (
+          <button onClick={() => removeFavorite(id)}>
+            <FaTrash size={20} />
+          </button>
+        )}
       </div>
     </div>
   );

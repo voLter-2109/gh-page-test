@@ -1,0 +1,1 @@
+export const HOME_PATH = "/gh-page-test"
